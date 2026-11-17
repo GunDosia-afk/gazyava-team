@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Расписание мероприятий студенческого клуба.">
+  <title>Расписание — Студенческий клуб</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <input class="theme-toggle" type="checkbox" id="theme-toggle" aria-label="Переключить светлую и тёмную тему">
+  <div class="site-shell">
+    <header class="site-header">
+      <a class="logo" href="index.html" aria-label="Студенческий клуб — главная"><span class="logo-mark">СК</span><span>студклуб<span class="logo-dot">.</span></span></a>
+      <nav class="main-nav" aria-label="Основная навигация"><a href="index.html">Главная</a><a class="active" href="schedule.html">Расписание</a><a href="index.html#about">О клубе</a><a href="index.html#contacts">Контакты</a></nav>
+      <div class="header-actions"><label class="theme-label" for="theme-toggle"><span class="theme-icon">◐</span><span class="theme-word">Тема</span></label><a class="header-cta" href="index.html#contacts">Присоединиться <span>↗</span></a></div>
+    </header>
+
+    <main class="schedule-main section-wrap">
+      <div class="schedule-intro">
+        <p class="eyebrow"><span class="eyebrow-line"></span> КАЛЕНДАРЬ КЛУБА / 2026</p>
+        <h1>Выбирай, что<br><span>тебе по душе.</span></h1>
+        <p>Лекции, творческие встречи и спорт — планируй время для того, что вдохновляет.</p>
+      </div>
+      <div class="schedule-tools">
+        <div class="filter-block">
+          <span class="tools-label">КАТЕГОРИИ</span>
+          <input type="radio" name="category" id="filter-all" checked>
+          <input type="radio" name="category" id="filter-lectures">
+          <input type="radio" name="category" id="filter-workshops">
+          <input type="radio" name="category" id="filter-sport">
+          <div class="filter-tabs" role="group" aria-label="Фильтр мероприятий">
+            <label for="filter-all">Все события <span>06</span></label>
+            <label for="filter-lectures">Лекции <span>02</span></label>
+            <label for="filter-workshops">Воркшопы <span>02</span></label>
+            <label for="filter-sport">Спорт <span>02</span></label>
+          </div>
+        </div>
+        <div class="search-mock"><span aria-hidden="true">⌕</span><input type="search" aria-label="Поиск мероприятий (демо)" placeholder="Поиск мероприятий..." disabled><span class="search-note">ПОИСК — ДЕМО</span></div>
+      </div>
+
+      <div class="schedule-grid">
+        <article class="event-card schedule-card category-lecture" id="event-idea">
+          <div class="event-visual visual-talk"><span class="visual-label">ЛЕКЦИЯ</span><div class="visual-big">IDEA<br>LAB<span>✳</span></div><div class="visual-stamp">THINK<br>LOUD</div></div>
+          <div class="event-info"><div class="event-meta"><span>18 ноября · 16:00</span><span>СРЕДА</span></div><h2>Как превратить идею в проект</h2><p>Поговорим о том, как проверить задумку, собрать команду и сделать первый шаг.</p><div class="event-bottom"><span class="event-place">⌖ Аудитория 204</span><a href="#modal-idea" class="card-link">Подробнее →</a></div></div>
+        </article>
+        <article class="event-card schedule-card category-workshop" id="event-poster">
+          <div class="event-visual visual-design"><span class="visual-label">ВОРКШОП</span><div class="design-shapes"><i></i><b></b><em></em></div><div class="visual-side">CREATE<br>YOUR<br>STYLE</div></div>
+          <div class="event-info"><div class="event-meta"><span>20 ноября · 15:00</span><span>ПЯТНИЦА</span></div><h2>Постер за один вечер</h2><p>Создадим яркий постер и познакомимся с основами композиции и цвета.</p><div class="event-bottom"><span class="event-place">⌖ Медиалаборатория</span><a href="#modal-poster" class="card-link">Подробнее →</a></div></div>
+        </article>
+        <article class="event-card schedule-card category-sport" id="event-volley">
+          <div class="event-visual visual-sport"><span class="visual-label">СПОРТ</span><div class="sport-ball"></div><div class="sport-word">PLAY<br>TOGETHER</div></div>
+          <div class="event-info"><div class="event-meta"><span>22 ноября · 12:00</span><span>ВОСКРЕСЕНЬЕ</span></div><h2>Открытая игра в волейбол</h2><p>Дружеская игра для любого уровня подготовки. Инвентарь предоставим.</p><div class="event-bottom"><span class="event-place">⌖ Спортивный зал</span><a href="#modal-volley" class="card-link">Подробнее →</a></div></div>
+        </article>
+        <article class="event-card schedule-card category-lecture">
+          <div class="event-visual visual-voice"><span class="visual-label">ЛЕКЦИЯ</span><div class="voice-circle">VOICE<br><b>UP!</b></div><div class="voice-star">✳</div></div>
+          <div class="event-info"><div class="event-meta"><span>25 ноября · 17:30</span><span>СРЕДА</span></div><h2>Говори уверенно</h2><p>Практические приёмы публичных выступлений и работа с волнением.</p><div class="event-bottom"><span class="event-place">⌖ Лекторий</span><a href="#modal-voice" class="card-link">Подробнее →</a></div></div>
+        </article>
+        <article class="event-card schedule-card category-workshop">
+          <div class="event-visual visual-photo"><span class="visual-label">ВОРКШОП</span><div class="photo-frame">FRAME<br><span>YOUR</span><br>DAY</div><div class="photo-flash">✦</div></div>
+          <div class="event-info"><div class="event-meta"><span>27 ноября · 16:00</span><span>ПЯТНИЦА</span></div><h2>Мобильная фотография</h2><p>Учимся видеть кадр, работать со светом и снимать на смартфон.</p><div class="event-bottom"><span class="event-place">⌖ Творческая студия</span><a href="#modal-photo" class="card-link">Подробнее →</a></div></div>
+        </article>
+        <article class="event-card schedule-card category-sport">
+          <div class="event-visual visual-run"><span class="visual-label">СПОРТ</span><div class="run-lines">MOVE<br>MORE<span>↗</span></div><div class="run-circle"></div></div>
+          <div class="event-info"><div class="event-meta"><span>29 ноября · 10:00</span><span>ВОСКРЕСЕНЬЕ</span></div><h2>Утренняя пробежка</h2><p>Лёгкий маршрут, хорошая компания и заряд энергии на весь день.</p><div class="event-bottom"><span class="event-place">⌖ Главный вход колледжа</span><a href="#modal-run" class="card-link">Подробнее →</a></div></div>
+        </article>
+      </div>
+      <p class="schedule-footnote">* Даты и события в макете приведены как пример для учебного проекта.</p>
+    </main>
+
+    <footer class="site-footer section-wrap"><a class="logo" href="index.html"><span class="logo-mark">СК</span><span>студклуб<span class="logo-dot">.</span></span></a><p>Создаём студенческую жизнь вместе.</p><div class="footer-links"><a href="index.html">Главная</a><a href="schedule.html">Расписание</a><a href="index.html#contacts">Контакты</a></div><small>© 2026 Студенческий клуб</small></footer>
+  </div>
+
+  <section class="modal" id="modal-idea" aria-labelledby="title-idea"><div class="modal-box"><a class="modal-close" href="#event-idea" aria-label="Закрыть окно">×</a><p class="eyebrow">ЛЕКЦИЯ · 18 НОЯБРЯ, 16:00</p><h2 id="title-idea">Как превратить идею в проект</h2><p>Разберём, как оценить идею, определить аудиторию, собрать команду и составить простой план действий. Подойдёт даже тем, кто пока только ищет тему для своего первого проекта.</p><p><strong>Место:</strong> аудитория 204</p><a class="button button-primary" href="index.html#contacts">Хочу участвовать →</a></div></section>
+  <section class="modal" id="modal-poster" aria-labelledby="title-poster"><div class="modal-box"><a class="modal-close" href="#event-poster" aria-label="Закрыть окно">×</a><p class="eyebrow">ВОРКШОП · 20 НОЯБРЯ, 15:00</p><h2 id="title-poster">Постер за один вечер</h2><p>На практике разберём композицию, цвет и визуальную иерархию, а затем соберём собственный постер. Возьми ноутбук, если он у тебя есть.</p><p><strong>Место:</strong> медиалаборатория</p><a class="button button-primary" href="index.html#contacts">Хочу участвовать →</a></div></section>
+  <section class="modal" id="modal-volley" aria-labelledby="title-volley"><div class="modal-box"><a class="modal-close" href="#event-volley" aria-label="Закрыть окно">×</a><p class="eyebrow">СПОРТ · 22 НОЯБРЯ, 12:00</p><h2 id="title-volley">Открытая игра в волейбол</h2><p>Собираемся на дружескую игру. Можно прийти одному — распределим участников по командам на месте. Не забудь спортивную обувь.</p><p><strong>Место:</strong> спортивный зал</p><a class="button button-primary" href="index.html#contacts">Хочу участвовать →</a></div></section>
+  <section class="modal" id="modal-voice" aria-labelledby="title-voice"><div class="modal-box"><a class="modal-close" href="#event-idea" aria-label="Закрыть окно">×</a><p class="eyebrow">ЛЕКЦИЯ · 25 НОЯБРЯ, 17:30</p><h2 id="title-voice">Говори уверенно</h2><p>Узнаем, как структурировать выступление, удерживать внимание аудитории и справляться с волнением.</p><p><strong>Место:</strong> лекторий</p><a class="button button-primary" href="index.html#contacts">Хочу участвовать →</a></div></section>
+  <section class="modal" id="modal-photo" aria-labelledby="title-photo"><div class="modal-box"><a class="modal-close" href="#event-poster" aria-label="Закрыть окно">×</a><p class="eyebrow">ВОРКШОП · 27 НОЯБРЯ, 16:00</p><h2 id="title-photo">Мобильная фотография</h2><p>Поговорим о свете, ракурсе и композиции, а затем сделаем серию кадров на смартфон.</p><p><strong>Место:</strong> творческая студия</p><a class="button button-primary" href="index.html#contacts">Хочу участвовать →</a></div></section>
+  <section class="modal" id="modal-run" aria-labelledby="title-run"><div class="modal-box"><a class="modal-close" href="#event-volley" aria-label="Закрыть окно">×</a><p class="eyebrow">СПОРТ · 29 НОЯБРЯ, 10:00</p><h2 id="title-run">Утренняя пробежка</h2><p>Лёгкая пробежка в комфортном темпе. Подойдёт начинающим, можно просто пройти маршрут пешком.</p><p><strong>Место:</strong> главный вход колледжа</p><a class="button button-primary" href="index.html#contacts">Хочу участвовать →</a></div></section>
+</body>
+</html>
